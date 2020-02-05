@@ -215,7 +215,7 @@ class Builder extends QueryBuilder {
             $results = $this->collection->aggregate($pipeline);
 
             // Return results
-            return $results['result'];
+            return $results['cursor']['firstBatch'];
         }
 
         // Distinct query
